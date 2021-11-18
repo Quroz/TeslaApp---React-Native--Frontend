@@ -1,21 +1,34 @@
 import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-
+import React, {useState} from 'react';
+import { KeyboardAvoidingView, Platform, StyleSheet, Text, TextInput, View, TouchableOpacity, ImageBackground} from 'react-native';
+import CarsList from './components/CarsList';
+import Header from "./components/Header"
 export default function App() {
+
+ 
+
+  
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+    <View style = {styles.container}>
+      <Header/>
+     
+    <CarsList/>
+
     </View>
+      
+    
+    
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
+    backgroundColor: '#E8EAED',
     justifyContent: 'center',
-  },
+    alignItems: 'center',
+    }, 
+
+  
+   
 });
